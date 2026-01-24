@@ -1,4 +1,4 @@
-{% set version = '1.7.3' %}
+{% set version = "1.8.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/NAM_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/NAM/NAM_{{ version }}.tar.gz
-  sha256: 7042cc32c93b3cfd59847961008af49f874e15d70e8cc9378d4a3805a8f4a289
+  sha256: 8f5a4c685874dd5a52c8cb04d6aa2916f58471b18353e48815ca1c5b9a8ecae6
 
 build:
-  number: 5
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,11 +45,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=NAM
   license: GPL-3.0-only
-  summary: Designed for association studies in nested association mapping (NAM) panels, experimental
-    and random panels. The method is described by Xavier et al. (2015) <doi:10.1093/bioinformatics/btv448>.
-    It includes tools for genome-wide associations of multiple populations, marker quality
-    control, population genetics analysis, genome-wide prediction, solving mixed models
-    and finding variance components through likelihood and Bayesian methods.
+  summary: Designed for association studies in nested association mapping (NAM) panels, experimental and random panels. The method is described by Xavier et al. (2015) <doi:10.1093/bioinformatics/btv448>. It includes tools for genome-wide associations of multiple populations, marker quality control, population genetics analysis,
+    genome-wide prediction, solving mixed models and finding variance components through likelihood and Bayesian methods.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
